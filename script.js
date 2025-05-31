@@ -1,39 +1,53 @@
-// 인기 MCP 서버 예시 데이터
+// 인기 MCP(서버 관리 패널/호스팅) 예시 데이터
 const servers = [
   {
-    name: '마인리스트',
-    desc: '국내 최대 마인크래프트 서버 커뮤니티. 다양한 서버와 리뷰, 추천 시스템 제공.',
-    address: 'https://minelist.kr',
-    info: '서바이벌, 창작, RPG, 미니게임 등 다양한 장르',
-    link: 'https://minelist.kr/'
+    name: 'Multicraft',
+    desc: '가장 널리 사용되는 마인크래프트 서버 관리 패널. 직관적 UI와 다양한 호스팅 지원.',
+    address: 'https://www.multicraft.org/',
+    info: '웹 기반, 다중 서버 관리, 권한 분리, 플러그인 관리',
+    link: 'https://www.multicraft.org/'
   },
   {
-    name: 'MCPC',
-    desc: '한국 대표 마인크래프트 커뮤니티. 서버 홍보, 자료실, 유저 커뮤니티 제공.',
-    address: 'https://mcpc.kr',
-    info: '서버 홍보, 커뮤니티, 자료실, 이벤트',
-    link: 'https://mcpc.kr/'
+    name: 'Pterodactyl',
+    desc: '오픈소스 게임 서버 관리 패널. Docker 기반, 강력한 확장성, 무료 사용 가능.',
+    address: 'https://pterodactyl.io/',
+    info: '오픈소스, Docker, 다양한 게임 지원, 무료',
+    link: 'https://pterodactyl.io/'
   },
   {
-    name: '마인팜',
-    desc: '오랜 역사의 마인팜 서버. 경제, 농장, 다양한 컨텐츠와 친절한 운영진.',
-    address: 'play.minefarm.kr',
-    info: '경제, 파밍, 커뮤니티, 이벤트',
-    link: 'https://minefarm.kr/'
+    name: 'AMP (CubeCoders)',
+    desc: '다양한 게임 서버를 손쉽게 관리할 수 있는 통합 패널. 자동 업데이트, 백업 등 지원.',
+    address: 'https://cubecoders.com/AMP',
+    info: '통합 관리, 자동화, 백업/복구, 다양한 게임 지원',
+    link: 'https://cubecoders.com/AMP'
   },
   {
-    name: '마인플렉스 (Mineplex)',
-    desc: '글로벌 인기 미니게임 서버. 다양한 게임모드와 대규모 유저.',
-    address: 'us.mineplex.com',
-    info: '미니게임, 글로벌, 영어지원',
-    link: 'https://www.mineplex.com/'
+    name: 'McMyAdmin',
+    desc: '오래된 전통의 마인크래프트 서버 관리 패널. 간편한 설치와 관리 기능 제공.',
+    address: 'https://mcmyadmin.com/',
+    info: '간편 설치, 웹 UI, 권한 관리, 백업',
+    link: 'https://mcmyadmin.com/'
   },
   {
-    name: '하이픽셀 (Hypixel)',
-    desc: '세계 최대 마인크래프트 서버. 다양한 게임모드와 방대한 컨텐츠.',
-    address: 'mc.hypixel.net',
-    info: '미니게임, 글로벌, 영어지원, 랭킹',
-    link: 'https://hypixel.net/'
+    name: 'Akliz',
+    desc: '마인크래프트 서버 전문 호스팅. 강력한 하드웨어와 직관적인 관리 패널 제공.',
+    address: 'https://www.akliz.net/minecraft-server-hosting',
+    info: '호스팅, 빠른 지원, 자동 설치, 다양한 플랜',
+    link: 'https://www.akliz.net/minecraft-server-hosting'
+  },
+  {
+    name: 'PebbleHost',
+    desc: '가성비 좋은 마인크래프트 서버 호스팅. 자동 설치와 다양한 패널 기능 제공.',
+    address: 'https://pebblehost.com/',
+    info: '저렴한 가격, 자동 설치, 다양한 패널 기능',
+    link: 'https://pebblehost.com/'
+  },
+  {
+    name: 'Shockbyte',
+    desc: '글로벌 인기 마인크래프트 서버 호스팅. 쉬운 관리와 24/7 지원.',
+    address: 'https://shockbyte.com/',
+    info: '글로벌, 24/7 지원, 자동 설치, 다양한 플랜',
+    link: 'https://shockbyte.com/'
   }
 ];
 
@@ -46,8 +60,8 @@ function renderServers(list) {
     card.innerHTML = `
       <div class="server-title">${server.name}</div>
       <div class="server-desc">${server.desc}</div>
-      <div class="server-info">주소: ${server.address} | ${server.info}</div>
-      <a class="server-link" href="${server.link}" target="_blank">서버 바로가기</a>
+      <div class="server-info">${server.info}</div>
+      <a class="server-link" href="${server.link}" target="_blank">공식 사이트 바로가기</a>
     `;
     container.appendChild(card);
   });
